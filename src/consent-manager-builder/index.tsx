@@ -184,7 +184,9 @@ export default class ConsentManagerBuilder extends Component<Props, State> {
       initialPreferences,
       mapCustomPreferences,
       defaultDestinationBehavior,
+      cookieDomain,
       cookieName,
+      cookieExpires,
       cdnHost = ConsentManagerBuilder.defaultProps.cdnHost
     } = this.props
 
@@ -217,7 +219,13 @@ export default class ConsentManagerBuilder extends Component<Props, State> {
         const mapped = mapCustomPreferences(destinations, preferences)
         destinationPreferences = mapped.destinationPreferences
         customPreferences = mapped.customPreferences
-        preferences = customPreferences
+        savePreferences({
+          destinationPreferences,
+          customPreferences,
+          cookieDomain,
+          cookieName,
+          cookieExpires
+        })
       }
     } else {
       preferences = destinationPreferences || initialPreferences
