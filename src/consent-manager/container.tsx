@@ -205,7 +205,7 @@ const Container: React.FC<ContainerProps> = props => {
 
   return (
     <>
-      {showBanner && props.isConsentRequired && props.newDestinations.length > 0 && (
+      {false && showBanner && props.isConsentRequired && props.newDestinations.length > 0 && (
         <Banner
           innerRef={current => (banner = { current })}
           onClose={onClose}
