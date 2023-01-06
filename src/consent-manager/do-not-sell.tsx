@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 const Heading = styled('h4')`
   margin: 16px 0;
   cursor: pointer;
+  display: flex;
 `
 
 const DownChevron = styled('img')`
@@ -106,12 +107,14 @@ export default class DoNotSell extends PureComponent<DoNotSellProps, { isOpen: b
     return (
       <div>
         <Heading onClick={onClick}>
-          Do Not Sell or Share My Personal Information
-          {this.state.isOpen ? (
-            <UpChevron src="https://mktg-assets.tcgplayer.com/web/svg-embeds/icons/chevron-down.svg" />
-          ) : (
-            <DownChevron src="https://mktg-assets.tcgplayer.com/web/svg-embeds/icons/chevron-down.svg" />
-          )}
+          <div>Do Not Sell or Share My Personal Information</div>
+          <div>
+            {this.state.isOpen ? (
+              <UpChevron src="https://mktg-assets.tcgplayer.com/web/svg-embeds/icons/chevron-down.svg" />
+            ) : (
+              <DownChevron src="https://mktg-assets.tcgplayer.com/web/svg-embeds/icons/chevron-down.svg" />
+            )}
+          </div>
         </Heading>
         {this.state.isOpen && <DoNotSellText />}
       </div>
