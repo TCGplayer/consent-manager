@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import Dialog from './dialog'
+import DoNotSell from './do-not-sell'
 import { DefaultButton, GreenButton } from './buttons'
 import {
   Destination,
@@ -135,6 +136,7 @@ export default class PreferenceDialog extends PureComponent<PreferenceDialogProp
         onSubmit={this.handleSubmit}
       >
         {content}
+        <DoNotSell />
 
         <TableScroll>
           <Table>
