@@ -5,6 +5,7 @@ const Heading = styled('h4')`
   margin: 16px 0;
   cursor: pointer;
   display: flex;
+  font-weight: bold;
 `
 
 const DownChevron = styled('img')`
