@@ -108,7 +108,7 @@ export default class DoNotSell extends PureComponent<DoNotSellProps, { isOpen: b
     return (
       <div>
         <Heading onClick={onClick}>
-          <div>Do Not Sell or Share My Personal Information</div>
+          <div>Notice of Right to Opt-Out of Sale/Sharing</div>
           <div>
             {this.state.isOpen ? (
               <UpChevron src="https://mktg-assets.tcgplayer.com/web/svg-embeds/icons/chevron-down.svg" />
