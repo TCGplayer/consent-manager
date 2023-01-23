@@ -67,7 +67,7 @@ class DoNotSellText extends PureComponent {
         </p>
         <p>
           Please note that, because both of the elections above are browser-specific, your request
-          to opt-out in each instance will only apply to teh browser and the device from which you
+          to opt-out in each instance will only apply to the browser and the device from which you
           submit the request, and you will need to repeat this process on each device and browser
           that you use.
         </p>
